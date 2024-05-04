@@ -16,7 +16,6 @@ body {
 header {
   width: 100%;
   height: 13vh;
-  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -168,8 +167,72 @@ nav a {
         width: 26vw;
     }
 }
+
+/* Course Modules section styling */
+
+#course-module{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 3vw 5vw;
+}
+#course-module > h1{
+    font-size: 2.3vw;
+    font-weight: 600;
+}
+#course-module > h1 > span{
+    color: #14A67D;
+    font-weight: 800;
+}
+#course-module > p{
+    font-size: 1.1vw;
+    color: #1d1d1d;
+    letter-spacing: 0.5px;
+    margin-top: 1vh;
+}
+#modules-container{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 2vw;
+}
+.module-card{
+    width: 24%;
+    height: 23vw;
+    box-shadow: 0 0 12px #7474746f;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.module-img{
+    width: 100%;
+    height: 14vw;
+}
+.module-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.module-card > h2{
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight: 500;
+}
+.module-card > a{
+    border-radius: 0;
+    padding: 0.7vw 1.8vw;
+    text-decoration: none;
+}
+
 @media (max-width: 700px) {
-  /* Nav bar responsiveness for mobile devices */
+  /* Nav bar responsiveness for small devices */
 
   header {
     justify-content: space-between;
@@ -242,7 +305,8 @@ nav a {
     display: none;
   }
 
-  /* Hero section Responsiveness for mobile devices */
+  /* Hero section Responsiveness for small devices */
+
 #hero{
     height: 110vh;
 }
@@ -257,6 +321,7 @@ nav a {
     font-size: 4vw;
   }
   #hero-left > h1{
+    font-size: 7vw;
   }
   #hero-left > p{
     font-size: 3vw;
@@ -274,5 +339,38 @@ nav a {
   }
   #hero-right > img{
     width: 15rem;
+  }
+
+  /* Course module responsiveness for small devices */
+
+  #course-module{
+    padding: 6vw 2vw;
+  }
+  #course-module > h1{
+    font-size: 6vw;
+    text-align: center;
+  }
+  #course-module > p{
+    font-size: 2.2vw;
+    text-align: center;
+  }
+  #modules-container{
+    justify-content: center;
+    gap: 3vw;
+  }
+  .module-card{
+    width: 16rem;
+    height: 20rem;
+    justify-content: start;
+    gap: 1.7rem;
+  }
+  .module-img{
+    height: 10rem;
+  }
+  .module-card > h2{
+    font-size: 1.4rem;
+  }
+  .module-card > a{
+    font-size: 1rem;
   }
 }
